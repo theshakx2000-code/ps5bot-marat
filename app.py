@@ -26,9 +26,7 @@ def webhook():
 
 def send_message(chat_id, text):
     url = f"https://api.green-api.com/waInstance{GREEN_ID}/sendMessage/{GREEN_TOKEN}"
-    requests.post(url, json={"ch
-  atId": chat_id, "message": text})
+    requests.post(url, json={"chatId": chat_id, "message": text})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
-  
